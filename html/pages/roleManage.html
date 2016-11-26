@@ -262,8 +262,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <i class="fa fa-circle-o"></i> 权限管理
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="userManage.html"><i class="fa fa-circle-o"></i> 用户管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> 角色管理</a></li>
+                    <li><a href="userManage.html"><i class="fa fa-circle-o"></i> 用户管理</a></li>
+                    <li class="active"><a href="#"><i class="fa fa-circle-o"></i> 角色管理</a></li>
                 </ul>
             </li> 
             <li><a href="#"><i class="fa fa-circle-o"></i> 日志管理</a></li>
@@ -280,13 +280,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        用户管理
-        <small>对用户信息进行增加、删除、修改</small>
+        角色管理
+        <small>对角色信息进行增加、删除、修改</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-gears"></i> 系统管理</a></li>
-        <li class="active">权限管理</li>
-        <li class="active">用户管理</li>
+        <li>权限管理</li>
+        <li>角色管理</li>
       </ol>
     </section>
 
@@ -296,8 +296,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">用户列表</h3>
-              <button class="btn btn-warning btn-flat pull-right" data-toggle="modal" data-target="#addModal">添加用户</button>
+              <h3 class="box-title">角色列表</h3>
+              <button class="btn btn-warning btn-flat pull-right" data-toggle="modal" data-target="#addModal">添加角色</button>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -305,18 +305,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <thead>
                     <tr>
                       <th>编号</th>
-                      <th>姓名</th>
                       <th>角色</th>
-                      <th>密码</th>
                       <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                       <td>1</td>
-                      <td>xixi</td>
                       <td>管理员</td>
-                      <td>12345678</td>
                       <td>
                           <span class="label label-success" data-toggle="modal" data-target="#editModal"> 修改 </span>
                           &nbsp;
@@ -325,9 +321,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>xixi</td>
-                      <td>管理员</td>
-                      <td>12345678</td>
+                      <td>超级管理员</td>
                       <td>
                           <span class="label label-success"> 修改 </span>
                           &nbsp;
@@ -338,9 +332,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <tfoot>
                     <tr>
                       <th>编号</th>
-                      <th>姓名</th>
                       <th>角色</th>
-                      <th>密码</th>
                       <th>操作</th>
                     </tr>
                 </tfoot>
@@ -380,7 +372,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+        <h4 class="modal-title" id="myModalLabel">添加角色</h4>
       </div>
       <div class="modal-body">
         <div class="modal-width">
@@ -388,28 +380,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <form class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputName" class="col-sm-2 control-label">姓名</label>
+                  <label for="inputName" class="col-sm-2 control-label">角色</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputName" placeholder="姓名">
+                    <input type="text" class="form-control" id="inputName" placeholder="角色">
                   </div>
                 </div>
                 <!-- select -->
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">角色</label>
+                  <label class="col-sm-2 control-label">权限</label>
                   <div class="col-sm-10">
-                      <select class="form-control">
-                        <option>管理员</option>
-                        <option>老师</option>
-                        <option>超级管理员</option>
+                      <select multiple class="form-control">
+                        <option>设备管理</option>
+                        <option>视频管理</option>
+                        <option>系统管理</option>
                       </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
-
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
                   </div>
                 </div>
               </div>
@@ -430,7 +415,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">修改</h4>
+        <h4 class="modal-title" id="myModalLabel">添加角色</h4>
       </div>
       <div class="modal-body">
         <div class="modal-width">
@@ -438,28 +423,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <form class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputName" class="col-sm-2 control-label">姓名</label>
+                  <label for="inputName" class="col-sm-2 control-label">角色</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputName" placeholder="姓名">
+                    <input type="text" class="form-control" id="inputName" placeholder="角色">
                   </div>
                 </div>
                 <!-- select -->
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">角色</label>
+                  <label class="col-sm-2 control-label">权限</label>
                   <div class="col-sm-10">
-                      <select class="form-control">
-                        <option>管理员</option>
-                        <option>老师</option>
-                        <option>超级管理员</option>
+                      <select multiple class="form-control">
+                        <option>设备管理</option>
+                        <option>视频管理</option>
+                        <option>系统管理</option>
                       </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
-
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
                   </div>
                 </div>
               </div>
