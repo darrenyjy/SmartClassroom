@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>智慧教室 | 权限管理</title>
+  <title>智慧教室 | 编辑设备</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -225,14 +225,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="sidebar-menu">
         <li class="header">导航</li>
         <!-- Optionally, you can add icons to the links -->
-        <li>
+        <li class="treeview active">
             <a href="#"><i class="fa fa-laptop"></i> <span>设备管理</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
             <ul class="treeview-menu">
-                <li><a href="editDevice.html"><i class="fa fa-circle-o"></i> 编辑设备</a></li>
+                <li class="active"><a href="editDevice.html"><i class="fa fa-circle-o"></i> 编辑设备</a></li>
                 <li><a href="#"><i class="fa fa-circle-o"></i> 设备状态监控</a></li>
                 <li><a href="#"><i class="fa fa-circle-o"></i> 远程设备开关</a></li>
             </ul>
@@ -249,7 +249,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li><a href="#"><i class="fa fa-circle-o"></i> 广播管理</a></li>
             </ul>
         </li>
-        <li class="treeview active">
+        <li class="treeview">
           <a href="#"><i class="fa fa-gears"></i> <span>系统管理</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -257,13 +257,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-circle-o"></i> 学校课表管理</a></li>
-            <li class="active">
+            <li>
                 <a href="authorityManage.html">
                     <i class="fa fa-circle-o"></i> 权限管理
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="userManage.html"><i class="fa fa-circle-o"></i> 用户管理</a></li>
-                    <li class="active"><a href="roleManage.html"><i class="fa fa-circle-o"></i> 角色管理</a></li>
+                    <li><a href="roleManage.html"><i class="fa fa-circle-o"></i> 角色管理</a></li>
                 </ul>
             </li> 
             <li><a href="#"><i class="fa fa-circle-o"></i> 日志管理</a></li>
@@ -280,13 +280,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        角色管理
-        <small>对角色信息进行增加、删除、修改</small>
+        编辑设备
+        <small>对设备信息进行增加、删除、修改</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-gears"></i> 系统管理</a></li>
-        <li>权限管理</li>
-        <li>角色管理</li>
+        <li><a href="#"><i class="fa fa-gears"></i> 设备管理</a></li>
+        <li>编辑设备</li>
       </ol>
     </section>
 
@@ -296,7 +295,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">角色列表</h3>
+              <h3 class="box-title">设备列表</h3>
               <button class="btn btn-warning btn-flat pull-right" data-toggle="modal" data-target="#addModal">添加角色</button>
             </div>
             <!-- /.box-header -->
