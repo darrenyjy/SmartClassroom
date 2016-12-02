@@ -1,4 +1,4 @@
-######################
+﻿######################
 # 解决java产生文件
 ######################
 *.class
@@ -37,6 +37,7 @@ buildNumber.properties
 
 ## Directory-based project format:
 .idea/
+maven/testssm/.idea/*
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
