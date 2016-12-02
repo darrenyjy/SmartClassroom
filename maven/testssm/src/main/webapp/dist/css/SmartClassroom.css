@@ -1,0 +1,23 @@
+body{
+    font-family: "微软雅黑","黑体";
+}
+
+.main-header .logo{
+    font-family: "微软雅黑","黑体";
+}
+
+.login-page{
+    background-color: #3c8dbc;
+}
+
+.login-logo a{
+    color:white;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "微软雅黑","黑体";
+}
+
+.modal-width{
+    width: 80%;
+}
