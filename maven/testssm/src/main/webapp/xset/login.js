@@ -13,7 +13,7 @@ function login() {
         success: function(data){
             console.log(data.msg);
             if(data.msg == "0"){
-
+                window.location.href = "index.do";
             }
         }
     });

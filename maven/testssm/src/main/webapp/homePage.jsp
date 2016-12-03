@@ -19,9 +19,7 @@
     <jsp:include page="navigation.jsp"></jsp:include>
 
     <!--引入侧边导航栏-->
-    <jsp:include page="navigation.jsp"></jsp:include>
-
-
+    <jsp:include page="sidebar.jsp"></jsp:include>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
