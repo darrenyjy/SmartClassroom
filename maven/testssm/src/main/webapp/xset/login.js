@@ -3,7 +3,7 @@ function login() {
     var password = $("#password").val();
     var data = {
         "username":username,
-        "password":password
+        "password":hex_md5(password)
     }
     $.ajax({
         type: "POST",
@@ -14,6 +14,8 @@ function login() {
             console.log(data.msg);
             if(data.msg == "0"){
                 window.location.href = "index.do";
+            }else{
+                $('.login-tip').show();
             }
         }
     });

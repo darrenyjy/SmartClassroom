@@ -45,7 +45,8 @@
         </div>
         <!-- /.social-auth-links -->
 
-        <a href="#">忘记密码</a><br>
+        <a href="#">忘记密码</a><br/>
+        <p class="label label-danger login-tip" style="display:none;margin-top: 5px;" >用户名或密码错误！</p>
     </div>
     <!-- /.login-box-body -->
 </div>
@@ -67,6 +68,7 @@
     });
 </script>
 
+<script src="./xset/md5.js"></script>
 <script src="./xset/login.js"></script>
 </body>
 </html>
