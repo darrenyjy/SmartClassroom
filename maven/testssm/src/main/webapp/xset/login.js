@@ -5,13 +5,16 @@ function login() {
         "username":username,
         "password":password
     }
-    console.log(data);
     $.ajax({
         type: "POST",
-        url: "/user/login",
+        url: "/login.do",
+        dataType: "json",
         data: data,
         success: function(data){
             console.log(data.msg);
+            if(data.msg == "0"){
+
+            }
         }
     });
 }

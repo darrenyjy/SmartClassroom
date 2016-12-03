@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: admin
+  User: xixi
   Date: 2016/12/2
   Time: 21:37
   To change this template use File | Settings | File Templates.
@@ -33,4 +33,13 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <link rel="stylesheet" href="./dist/css/skins/skin-blue.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="./plugins/datatables/dataTables.bootstrap.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="./dist/css/skins/_all-skins.min.css">
+
 </head>

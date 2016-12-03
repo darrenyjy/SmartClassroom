@@ -17,9 +17,10 @@
     AnnotationMethodHandlerAdapter 两个bean,它解决了一些@controllerz注解使用时的提前配置-->
     <mvc:annotation-driven />
 
+    <mvc:default-servlet-handler/>
     <!--配置 页面控制器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/"/>
+        <property name="prefix" value="/" />
         <property name="suffix" value=".jsp" />
 
     </bean>
