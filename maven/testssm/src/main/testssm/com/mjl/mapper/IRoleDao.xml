@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace用于与DAO层的接口类进行绑定,这样我们无需实现DAO层的接口
+类,其接口类就能够自动的找到相关的SQL语句进行绑定实现-->
+<mapper namespace="com.mjl.dao.IRoleDao">
+
+    <!--select表示查询,它的id名称必须与DAO层接口的方法名相同,否则无法绑定-->
+
+    <select id="selectById" parameterType="int" resultType="Role">
+        select * from tb_role where r_id = #{r_id}
+    </select>
+
+    <select id="getAllRole" resultType="Role">
+        select * from tb_role
+    </select>
+
+    <insert id="addRole" parameterType="Role" flushCache="true">
+        insert into tb_role (r_id,r_name) values (#{r_id},#{r_name})
+    </insert>
+
+    <update id="updateRole" parameterType="Role">
+        update tb_role set r_name=#{r_name} where r_id=#{r_id}
+    </update>
+
+    <delete id="deleteRole" parameterType="int">
+        delete from tb_role where r_id=#{r_id}
+    </delete>
+
+
+</mapper>

@@ -2,9 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-  <!--namespace用于与DAO层的接口类进行绑定,这样我们无需实现DAO层的接口
-  类,其接口类就能够自动的找到相关的SQL语句进行绑定实现-->
+<!--namespace用于与DAO层的接口类进行绑定,这样我们无需实现DAO层的接口
+类,其接口类就能够自动的找到相关的SQL语句进行绑定实现-->
 <mapper namespace="com.mjl.dao.IUserDao">
+    <!-- 配置一个resultMap指定返回的类型-->
+    <resultMap id="userResultMap" type="User">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+
+        <association property="role" javaType="Role">
+            <id column="r_id" property="r_id"/>
+            <result column="r_name" property="r_name"/>
+        </association>
+
+    </resultMap>
+
     <!--select表示查询,它的id名称必须与DAO层接口的方法名相同,否则无法绑定-->
     <select id="selectByName" parameterType="string" resultType="User">
         select * from tb_user where username = #{username}
@@ -12,8 +25,30 @@
 
     <select id="selectById" parameterType="int" resultType="User">
 
-         select * from tb_user where id = #{id}
+        select * from tb_user where id = #{id}
     </select>
+
+    <select id="getAllUser" resultMap="userResultMap">
+        SELECT
+        u.id,
+        u.username,
+        u.password,
+        r.r_id,
+        r.r_name
+    FROM tb_user u INNER JOIN tb_role r ON u.r_id=r.r_id
+    </select>
+
+    <insert id="addUser" parameterType="User" flushCache="true">
+        insert into tb_user (id,username,password,r_id) values (#{id},#{username},#{password},#{r_id})
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+        update tb_user set username=#{username},password=#{password},r_id=#{r_id} where id=#{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from tb_user where id=#{id}
+    </delete>
 
 
 </mapper>

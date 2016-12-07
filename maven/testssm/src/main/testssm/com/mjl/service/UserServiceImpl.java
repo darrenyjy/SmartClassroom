@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import java.util.List;
+
 /**
  * Created by jiangdongyu on 16/11/28.
  */
@@ -30,5 +32,25 @@ public class UserServiceImpl implements UserService {
         }
         return false;
 
+    }
+
+    public List<User> getAllUser() {
+        return Mapper.getAllUser();
+    }
+
+    public User selectById(int id) {
+        return Mapper.selectById(id);
+    }
+
+    public void addUser(User user) {
+        Mapper.addUser(user);
+    }
+
+    public void udateUser(User user) {
+        Mapper.updateUser(user);
+    }
+
+    public void deleteUser(int id) {
+        Mapper.deleteUser(id);
     }
 }

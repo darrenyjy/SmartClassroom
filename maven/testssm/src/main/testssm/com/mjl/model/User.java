@@ -1,5 +1,7 @@
 package com.mjl.model;
 
+import java.util.List;
+
 /**
  * Created by jiangdongyu on 16/11/28.
  */
@@ -7,6 +9,16 @@ public class User {
     private int id;
     private String username;
     private String password;
+    private int r_id;
+    private Role role;//使用一个role来表示角色
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 
     public String getPassword() {
         return password;
@@ -30,5 +42,23 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public int getR_id() {
+        return r_id;
+    }
+
+    public void setR_id(int r_id) {
+        this.r_id = r_id;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", r_id=" + r_id +
+                '}';
     }
 }

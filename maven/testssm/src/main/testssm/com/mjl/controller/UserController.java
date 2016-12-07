@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 
 /**
@@ -56,17 +57,32 @@ public class UserController {
         return mv;
     }
 
-    @RequestMapping(value="/userManage")
-    public ModelAndView userManage(){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("userManage");
-        return mv;
-    }
+//    @RequestMapping(value="/userManage")
+//    public ModelAndView userManage(){
+//        ModelAndView mv = new ModelAndView();
+//        mv.setViewName("userManage");
+//        return mv;
+//    }
 
     @RequestMapping(value="/roleManage")
     public ModelAndView roleManage(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("roleManage");
+        return mv;
+    }
+
+
+
+    /**
+     * 查找所有用户
+     * @return
+     */
+    @RequestMapping(value="/userManage")
+    public ModelAndView getAllUser(){
+        ModelAndView mv= new ModelAndView();
+        List<User> list= userService.getAllUser();
+        mv.addObject("list",list);
+        mv.setViewName("userManage");
         return mv;
     }
 }
