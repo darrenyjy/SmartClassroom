@@ -4,7 +4,7 @@
 
 <!--namespace用于与DAO层的接口类进行绑定,这样我们无需实现DAO层的接口
 类,其接口类就能够自动的找到相关的SQL语句进行绑定实现-->
-<mapper namespace="com.mjl.dao.IUserDao">
+<mapper namespace="com.pku.dao.IUserDao">
     <!-- 配置一个resultMap指定返回的类型-->
     <resultMap id="userResultMap" type="User">
         <id column="id" property="id"/>

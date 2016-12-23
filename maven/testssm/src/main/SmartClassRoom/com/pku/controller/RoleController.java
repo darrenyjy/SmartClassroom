@@ -1,7 +1,7 @@
-package com.mjl.controller;
+package com.pku.controller;
 
-import com.mjl.service.RoleService;
-import com.mjl.service.UserService;
+import com.pku.service.RoleService;
+import com.pku.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;

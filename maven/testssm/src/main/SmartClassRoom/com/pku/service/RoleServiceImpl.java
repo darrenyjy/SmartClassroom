@@ -1,7 +1,7 @@
-package com.mjl.service;
+package com.pku.service;
 
-import com.mjl.dao.IRoleDao;
-import com.mjl.model.Role;
+import com.pku.dao.IRoleDao;
+import com.pku.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

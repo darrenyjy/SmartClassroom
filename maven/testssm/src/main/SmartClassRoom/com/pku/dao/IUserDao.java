@@ -1,6 +1,6 @@
-package com.mjl.dao;
+package com.pku.dao;
 
-import com.mjl.model.User;
+import com.pku.model.User;
 
 import java.util.List;
 

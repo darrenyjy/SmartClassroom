@@ -2,10 +2,10 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <!--为com.mjl.model.User设置别名 User 方便调用-->
+    <!--为com.pku.model.User设置别名 User 方便调用-->
     <typeAliases>
-        <typeAlias alias="User" type="com.mjl.model.User"/>
-        <typeAlias alias="Role" type="com.mjl.model.Role"/>
+        <typeAlias alias="User" type="com.pku.model.User"/>
+        <typeAlias alias="Role" type="com.pku.model.Role"/>
     </typeAliases>
 
 

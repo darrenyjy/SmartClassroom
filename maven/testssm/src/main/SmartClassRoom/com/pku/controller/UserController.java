@@ -1,7 +1,7 @@
-package com.mjl.controller;
+package com.pku.controller;
 
-import com.mjl.model.User;
-import com.mjl.service.UserService;
+import com.pku.model.User;
+import com.pku.service.UserService;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

@@ -1,7 +1,7 @@
-package com.mjl.service;
+package com.pku.service;
 
-import com.mjl.dao.IUserDao;
-import com.mjl.model.User;
+import com.pku.dao.IUserDao;
+import com.pku.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;

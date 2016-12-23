@@ -1,11 +1,11 @@
-package com.mjl.test;
+package com.pku.test;
 
-import com.mjl.dao.IRoleDao;
-import com.mjl.dao.IUserDao;
+import com.pku.dao.IRoleDao;
+import com.pku.dao.IUserDao;
 
 
-import com.mjl.model.Role;
-import com.mjl.model.User;
+import com.pku.model.Role;
+import com.pku.model.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

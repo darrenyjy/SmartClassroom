@@ -1,4 +1,4 @@
-package com.mjl.model;
+package com.pku.model;
 
 import java.util.List;
 
