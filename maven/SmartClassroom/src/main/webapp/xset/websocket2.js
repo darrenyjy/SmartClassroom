@@ -2,7 +2,7 @@ function sendMessage() {
     var data={
         message:"pull",
         ownId:"1"
-    }
+    };
     $.ajax({
         type: "POST",
         url: "/sendMessage.do",

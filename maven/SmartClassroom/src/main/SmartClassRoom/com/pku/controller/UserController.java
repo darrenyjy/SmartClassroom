@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -89,12 +90,14 @@ public class UserController {
     }
 
     @RequestMapping("/sendMessage")
-    public @ResponseBody String sendMessage(){
+    public @ResponseBody String sendMessage(@RequestParam(value="message")String message,
+                                            @RequestParam(value="ownId")String ownId){
+
         //调用login方法来验证是否是注册用户
         JSONObject jsonObject = new JSONObject();
         //如果验证通过,则将用户信息传到前台
         NewWebSocket nbs = new NewWebSocket();
-        nbs.sendMessageToAll("hahaha");
+        nbs.sendMessageToOne(ownId,message);
         //request.setAttribute("user",user);
         //并跳转到success.jsp页面
         //return "success";
