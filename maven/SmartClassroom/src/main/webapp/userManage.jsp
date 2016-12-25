@@ -43,7 +43,7 @@
                     <div class="box">
                         <div class="box-header">
                             <h3 class="box-title">用户列表</h3>
-                            <button class="btn btn-warning btn-flat pull-right" data-toggle="modal" data-target="#addModal">添加用户</button>
+                            <button class="btn btn-warning btn-flat pull-right" data-toggle="modal" data-target="#addModal"  onclick="sendMessage()">添加用户</button>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -247,6 +247,7 @@
         });
     });
 </script>
+<script src="./xset/websocket2.js"></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the

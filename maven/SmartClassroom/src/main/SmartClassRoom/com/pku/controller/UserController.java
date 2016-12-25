@@ -73,6 +73,8 @@ public class UserController {
 
 
 
+
+
     /**
      * 查找所有用户
      * @return
@@ -84,5 +86,19 @@ public class UserController {
         mv.addObject("list",list);
         mv.setViewName("userManage");
         return mv;
+    }
+
+    @RequestMapping("/sendMessage")
+    public @ResponseBody String sendMessage(){
+        //调用login方法来验证是否是注册用户
+        JSONObject jsonObject = new JSONObject();
+        //如果验证通过,则将用户信息传到前台
+        NewWebSocket nbs = new NewWebSocket();
+        nbs.sendMessageToAll("hahaha");
+        //request.setAttribute("user",user);
+        //并跳转到success.jsp页面
+        //return "success";
+        //jsonObject.put("msg","0");
+        return jsonObject.toString();
     }
 }
