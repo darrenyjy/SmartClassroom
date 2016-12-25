@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.mjl</groupId>
-  <artifactId>testssm</artifactId>
+  <groupId>com.pku</groupId>
+  <artifactId>SmartClassroom</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>testssm Maven Webapp</name>
+  <name>SmartClassroom Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
 
@@ -167,6 +167,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>testssm</finalName>
+    <finalName>SmartClassroom</finalName>
   </build>
 </project>
